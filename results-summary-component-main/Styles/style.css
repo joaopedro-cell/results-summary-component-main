@@ -28,25 +28,36 @@
 }
 .container {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
-  flex-flow: column nowrap;
-
   align-items: center;
 }
 
 #panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(
     var(--color-light-slate-blue),
     var(--color-light-royal-blue)
   );
 }
 #circle {
+  flex-flow: column wrap;
+  height: 60px;
+  width: 60px;
   color: var(--color-white);
   background: linear-gradient(
     var(--color-violet-blue),
     var(--color-violet-persian-blue)
   );
-
   border-radius: 50%;
+}
+ul > li {
+  border-style: solid;
+  border-radius: 50px;
+  margin: 30px;
+  list-style-type: none;
+  padding-left: 30px;
 }
