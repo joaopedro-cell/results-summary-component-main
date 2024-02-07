@@ -13,10 +13,14 @@
   --color-light-lavender: hsl(241, 100%, 89%);
   --color-dark-gray-blue: hsl(224, 30%, 27%);
   /* ### Primary */
-  --color-light-red: hsl(0, 100%, 67%);
+  --color-red: hsl(0, 100%, 67%);
+  --color-light-red: hsla(0, 100%, 67%, 0.10);
   --color-orangey-yellow: hsl(39, 100%, 56%);
+  --color-orangey-yellow-light: hsla(39, 100%, 56%, 0.10);
   --color-green-teal: hsl(166, 100%, 37%);
-  -color-cobalt-blue: hsl(234, 85%, 45%);
+  --color-green-teal-light: hsl(166, 100%, 37%, 0.10);
+  --color-cobalt-blue: hsl(234, 85%, 45%);
+  --color-cobalt-blue-light: hsl(234, 85%, 45%, 0.10);
   /* ## Gradients */
 
   /* Background */
@@ -55,9 +59,29 @@
   border-radius: 50%;
 }
 ul > li {
-  border-style: solid;
-  border-radius: 50px;
+  padding: 10px;
+  border-radius: 8px;
   margin: 30px;
   list-style-type: none;
-  padding-left: 30px;
+}
+.icon {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+#reaction {
+  color: var(--color-red);
+  background-color: var(--color-light-red);
+}
+#memory {
+  color: var(--color-orangey-yellow);
+  background-color: var(--color-orangey-yellow-light);
+}
+#verbal {
+  color: var(--color-green-teal);
+  background-color: var(--color-green-teal-light);
+}
+#visual {
+  color: var(--color-cobalt-blue);
+  background-color: var(--color-cobalt-blue-light);
 }
