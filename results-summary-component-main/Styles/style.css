@@ -14,13 +14,13 @@
   --color-dark-gray-blue: hsl(224, 30%, 27%);
   /* ### Primary */
   --color-red: hsl(0, 100%, 67%);
-  --color-light-red: hsla(0, 100%, 67%, 0.10);
+  --color-light-red: hsla(0, 100%, 67%, 0.1);
   --color-orangey-yellow: hsl(39, 100%, 56%);
-  --color-orangey-yellow-light: hsla(39, 100%, 56%, 0.10);
+  --color-orangey-yellow-light: hsla(39, 100%, 56%, 0.1);
   --color-green-teal: hsl(166, 100%, 37%);
-  --color-green-teal-light: hsl(166, 100%, 37%, 0.10);
+  --color-green-teal-light: hsl(166, 100%, 37%, 0.1);
   --color-cobalt-blue: hsl(234, 85%, 45%);
-  --color-cobalt-blue-light: hsl(234, 85%, 45%, 0.10);
+  --color-cobalt-blue-light: hsl(234, 85%, 45%, 0.1);
   /* ## Gradients */
 
   /* Background */
@@ -42,21 +42,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--color-white);
   background: linear-gradient(
     var(--color-light-slate-blue),
     var(--color-light-royal-blue)
   );
 }
 #circle {
-  flex-flow: column wrap;
-  height: 60px;
-  width: 60px;
-  color: var(--color-white);
+  width: 50%;
+  height: 0;
+  padding-top: 50%;
   background: linear-gradient(
     var(--color-violet-blue),
     var(--color-violet-persian-blue)
   );
   border-radius: 50%;
+  color: var(--color-white);
+  text-align: center;
+  line-height: 100%;
+  position: relative;
+}
+.numero {
+  position: absolute; /* Define a posição absoluta para que o número fique dentro do círculo */
+  top: 50%; /* Alinha o topo do número ao centro do círculo */
+  left: 50%; /* Alinha a esquerda do número ao centro do círculo */
+  transform: translate(-50%, -50%); /* Centraliza o número dentro do círculo */
+  font-size: 20px; /* Tamanho da fonte do número */
+}
+#score {
+  font-size: 5em;
 }
 ul > li {
   padding: 10px;
